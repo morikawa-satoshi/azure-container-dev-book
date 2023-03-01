@@ -14,16 +14,21 @@
 		}
 	},
 	// VS Codeと拡張の設定
-	"settings": {
-		"java.jdt.ls.java.home": "/docker-java-home"
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			"settings": {
+				"java.jdt.ls.java.home": "/docker-java-home"
+			},
+			// VS Codeに導入する拡張を指定
+			"extensions": [
+				"vscjava.vscode-java-pack",
+				"redhat.fabric8-analytics",
+				"humao.rest-client",
+				"AquaSecurityOfficial.trivy-vulnerability-scanner"
+			]
+		}
 	},
-	// VS Codeに導入する拡張を指定
-	"extensions": [
-		"vscjava.vscode-java-pack",
-		"redhat.fabric8-analytics",
-		"humao.rest-client",
-		"AquaSecurityOfficial.trivy-vulnerability-scanner"
-	],
 	// Dev Containerのユーザ
 	"remoteUser": "vscode",
 	// Dev Containerの追加機能
